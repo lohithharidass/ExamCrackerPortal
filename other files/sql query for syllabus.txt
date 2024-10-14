@@ -1,0 +1,182 @@
+USE dream_career;
+
+CREATE TABLE syllabus (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    exam_name VARCHAR(255),
+    posts TEXT,
+    eligibility_criteria TEXT,
+    selection_process TEXT,
+    exam_pattern TEXT,
+    syllabus TEXT
+);
+
+INSERT INTO syllabus (exam_name, posts, eligibility_criteria, selection_process, exam_pattern, syllabus) 
+VALUES 
+(
+    'TANGEDCO Assistant Engineer (AE) Exam', 
+    'Assistant Engineer (Electrical), Assistant Engineer (Civil), Assistant Engineer (Mechanical)',
+    'Age: 18–30 years (General category), relaxations for SC/ST/OBC. 
+    Educational Qualification: 
+    AE (Electrical): B.E./B.Tech in EEE or equivalent. 
+    AE (Civil): B.E./B.Tech in Civil or equivalent. 
+    AE (Mechanical): B.E./B.Tech in Mechanical or equivalent.',
+    'Part I: Engineering Mathematics (20 questions), Part II: Basic Engineering & Sciences (35 questions), Part III: Subject-specific (60 questions)',
+    'Total Questions: 100, Total Marks: 100, Duration: 2 hours, No negative marking.',
+    'Electrical: Circuit Theory, Electrical Machines, Power Systems, Control Systems, Electrical Measurements, Power Electronics.
+    Mechanical: Engineering Mechanics, Thermodynamics, Fluid Mechanics, Design of Machine Elements, Heat Transfer.
+    Civil: Strength of Materials, Structural Engineering, Geotechnical Engineering, Environmental Engineering, Surveying.
+    General Studies: General Studies, Aptitude, Current Events, History, Indian Polity, Geography, Economy, Science and Technology.'
+);
+
+INSERT INTO syllabus (exam_name, posts, eligibility_criteria, selection_process, exam_pattern, syllabus) 
+VALUES 
+(
+    'Junior Assistant (Accounts) Exam', 
+    'Junior Assistant (Accounts)',
+    'Age: 18–30 years (General category), relaxations for SC/ST/OBC.
+    Educational Qualification: B.Com or equivalent degree from a recognized university.',
+    'Written Exam: Objective type (Computer-based test). 
+    Document Verification: After clearing the written exam, candidates are called for document verification.',
+    'Total Questions: 100, Total Marks: 100, Duration: 2 hours, No negative marking.',
+    'General Tamil/General English, Basic Accountancy and Auditing, General Knowledge.
+    History, Indian Polity, Geography, Economy, Science, and Technology.'
+);
+
+INSERT INTO syllabus (exam_name, posts, eligibility_criteria, selection_process, exam_pattern, syllabus) 
+VALUES 
+(
+    'PG Assistant Exam', 
+    'Post Graduate Assistants for government higher secondary schools in Tamil Nadu',
+    'Educational Qualification: 
+    A Master\'s degree in the concerned subject with at least 50% marks.
+    A B.Ed degree from a recognized institution is mandatory.',
+    'Written Exam: Objective type. 
+    Certificate Verification: Shortlisted candidates undergo document verification after clearing the exam.',
+    'Total Marks: 150, Subject Knowledge: 110 marks, Education Methodology: 30 marks, General Knowledge: 10 marks.
+    Duration: 3 hours. 
+    Minimum Qualifying Marks: 50% for general category, 45% for BC, 40% for MBC, SC, ST.',
+    'The syllabus varies based on the subject (Tamil, English, Mathematics, Physics, Chemistry, History, Geography, Economics, Commerce, etc.).
+    Subjects include:
+    Subject knowledge (concerned subject), Educational methodology, General knowledge, Current affairs.'
+);
+
+INSERT INTO syllabus (exam_name, posts, eligibility_criteria, selection_process, exam_pattern, syllabus) 
+VALUES 
+(
+    'TNUSRB Police Constable (PC) Exam', 
+    'Grade II Police Constable (Armed Reserve), Grade II Jail Warder, Firemen',
+    'Age: 18–30 years (General category), SC/ST, BC, and other reserved categories have age relaxations.
+    Educational Qualification: Must have passed SSLC/10th standard from a recognized board. Higher qualifications are allowed, but no special preference is given.',
+    'Written Examination: Objective type.
+    Physical Measurement Test (PMT): Candidates must meet specific height and chest (for males) requirements.
+    Endurance Test (ET): Long-distance run to check physical endurance.
+    Physical Efficiency Test (PET): Running, long jump, high jump.
+    Certificate Verification: Verification of educational and other documents.',
+    'Total Marks: 80 marks. General Knowledge: 50 marks, Psychology: 30 marks.
+    Physical Test: Qualifying. Endurance Test and PET: 15 marks.
+    Special Marks: Additional marks for NCC, NSS, sports participation, etc.',
+    'General Knowledge: Current Affairs, Indian Polity, History, Geography, Economics, Science, and Technology.
+    Psychology: Reasoning, Logical Analysis, Numerical Analysis, Communication Skills, and Information Handling.'
+);
+
+
+INSERT INTO syllabus (exam_name, posts, eligibility_criteria, selection_process, exam_pattern, syllabus) 
+VALUES 
+(
+    'TNUSRB Sub-Inspector (SI) Exam', 
+    'Sub-Inspector of Police (Taluk), Sub-Inspector of Police (Armed Reserve), Sub-Inspector of Police (Tamil Nadu Special Police - TSP)',
+    'Age: 20–28 years (General category), SC/ST, BC, and other reserved categories have age relaxations.
+    Educational Qualification: A Bachelor\'s degree from a recognized university (any discipline). Final year students awaiting results are also eligible to apply.',
+    'Written Examination: Objective type (includes Tamil language).
+    Physical Measurement Test (PMT): Candidates must meet required height and chest (for males) standards.
+    Endurance Test (ET): Candidates must complete a specified distance run.
+    Physical Efficiency Test (PET): Running, long jump, high jump.
+    Viva-Voce: An interview conducted after clearing previous stages.
+    Medical Examination: Medical fitness is assessed after all other stages are completed.',
+    'Total Marks: 100 marks. Written Exam: 70 marks, Psychology: 30 marks, Viva-Voce: 10 marks, Physical Efficiency Test: 15 marks.
+    Special Marks: 5 marks for sports, NCC, etc.',
+    'Part I (Tamil Language Test): Tamil language proficiency for non-exempt candidates.
+    Part II (General Knowledge): General Studies (Indian Polity, History, Geography, Economics, Science, Technology).
+    Psychology: Reasoning, Logical Analysis, Numerical Analysis, Communication Skills.
+    Physical Standards:
+    Male: Height 170 cm (General), 167 cm (SC/ST), Chest 81 cm (unexpanded) and 86 cm (expanded).
+    Female: Height 159 cm (General), 157 cm (SC/ST), Chest not applicable.'
+);
+
+
+INSERT INTO syllabus (exam_name, posts, eligibility_criteria, selection_process, exam_pattern, syllabus) 
+VALUES 
+(
+    'TNPSC Group I Exam', 
+    'Deputy Collector, Deputy Superintendent of Police (DSP), District Registrar, Assistant Commissioner, District Employment Officer',
+    'Age: 21–32 years (with relaxations for reserved categories).
+    Educational Qualification: A Bachelor\'s degree from a recognized university.',
+    'First Round: Preliminary Exam (Objective type).
+    Second Round: Mains Exam (Descriptive type).
+    Final Round: Interview.',
+    'Preliminary Exam: 200 questions, 300 marks, duration: 3 hours.
+    Mains Exam: 3 descriptive papers, each for 250 marks.
+    Interview: 100 marks.',
+    'General Studies, Aptitude and Mental Ability, Current Events, History, Indian Polity, Geography, Economy, Science, and Technology.'
+);
+
+
+INSERT INTO syllabus (exam_name, posts, eligibility_criteria, selection_process, exam_pattern, syllabus) 
+VALUES 
+(
+    'TNPSC Group II-A Services (Non-Interview Posts)', 
+    'Assistant in various departments like Commercial Taxes, Finance, etc., Personal Clerk, Junior Employment Officer',
+    'Age: 18–30 years (with relaxations for reserved categories).
+    Educational Qualification: A Bachelor\'s degree from a recognized university.',
+    'Written Exam only (Objective type, no interview).',
+    'Written Exam: 200 questions, 300 marks, duration: 3 hours.',
+    'General Studies, General Tamil/English, Aptitude, Logical Reasoning.'
+);
+
+
+INSERT INTO syllabus (exam_name, posts, eligibility_criteria, selection_process, exam_pattern, syllabus) 
+VALUES 
+(
+    'TNPSC Group II Services (Interview Posts)', 
+    'Assistant Section Officer, Revenue Assistant, Sub-Registrar Grade II, Municipal Commissioner',
+    'Age: 18–30 years (with relaxations for reserved categories).
+    Educational Qualification: A Bachelor\'s degree from a recognized university.',
+    'First Round: Preliminary Exam (Objective type).
+    Second Round: Mains Exam (Descriptive type).
+    Final Round: Interview.',
+    'Preliminary Exam: 200 questions, 300 marks, duration: 3 hours.
+    Mains Exam: descriptive papers (300 marks).
+    Interview: 40 marks.',
+    'General Studies, General Tamil/English, Aptitude, Logical Reasoning.'
+);
+
+
+INSERT INTO syllabus (exam_name, posts, eligibility_criteria, selection_process, exam_pattern, syllabus) 
+VALUES 
+(
+    'TNPSC Group IV Services (Interview Posts)', 
+    'Junior Assistant (Non-Security), Bill Collector, Typist, Steno-Typist, Village Administrative Officer (VAO)',
+    'Age: 18–30 years (with relaxations for reserved categories).
+    Educational Qualification: SSLC/10th pass for most posts. For Typist and Steno-Typist: Typing and shorthand skills.',
+    'Written Exam (Objective type).',
+    'Preliminary Exam: 200 questions, 300 marks, duration: 3 hours.',
+    'General Studies, General Tamil/English, Aptitude and Mental Ability.'
+);
+
+
+INSERT INTO syllabus (exam_name, posts, eligibility_criteria, selection_process, exam_pattern, syllabus) 
+VALUES 
+(
+    'Tamil Nadu Teacher Eligibility Test (TNTET)', 
+    'Primary Teachers (Classes I-V), Upper Primary Teachers (Classes VI-VIII)',
+    'For Primary Teachers (Classes I-V): Higher Secondary (or equivalent) with at least 50% marks and passed or appearing in the final year of a 2-year Diploma in Elementary Education (D.El.Ed) or a Bachelor\'s degree with at least 50% marks and B.Ed.
+    For Upper Primary Teachers (Classes VI-VIII): Bachelor\'s degree and passed or appearing in the final year of a 2-year Diploma in Elementary Education (D.El.Ed) or B.Ed.',
+    'Written Examination: Consists of two papers, Paper I for Primary and Paper II for Upper Primary.',
+    'Total Marks: 150 marks for both Paper I and Paper II.
+    Total Questions: 150 objective-type questions (1 mark per question).
+    Duration: 3 hours.
+    Physical Test: Qualifying.
+    Qualifying Marks: 60% for general category and 55% for reserved categories.',
+    'Paper I (Primary Teachers): Child Development and Pedagogy, Language I (Tamil), Language II (English), Mathematics, Environmental Studies.
+    Paper II (Upper Primary Teachers): Child Development and Pedagogy, Language I (Tamil), Language II (English), Mathematics and Science OR Social Studies.'
+);

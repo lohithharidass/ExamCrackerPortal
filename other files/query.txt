@@ -1,0 +1,133 @@
+CREATE DATABASE dream_career;
+
+USE dream_career;
+
+CREATE TABLE users (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    username VARCHAR(50) NOT NULL UNIQUE,
+    password VARCHAR(255) NOT NULL,
+    name VARCHAR(100),
+    email VARCHAR(100) UNIQUE,
+    mobile_number VARCHAR(15),
+    dob DATE,
+    education_level VARCHAR(50),
+    group_type ENUM('Group 1', 'Group 2', 'Group 3', 'Group 4'),
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+------------------------------------------------------------------------------------------------------------'
+
+
+CREATE TABLE exams (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    exam_name VARCHAR(255),
+    category VARCHAR(255),
+    conducting_body VARCHAR(255),
+    exam_frequency VARCHAR(100),
+    exam_type VARCHAR(50),
+    exam_date DATE
+);
+
+
+-- Central Government Exams
+
+INSERT INTO exams (exam_name, category, conducting_body, exam_frequency, exam_type, exam_date)
+VALUES ('UPSC Civil Services', 'IAS, IPS, IFS', 'UPSC', 'Annually', 'Central', '2025-06-01');
+
+INSERT INTO exams (exam_name, category, conducting_body, exam_frequency, exam_type, exam_date)
+VALUES ('SSC Exams', 'CGL, CHSL, MTS, JE', 'SSC', 'Multiple times a year', 'Central', '2024-11-15');
+
+INSERT INTO exams (exam_name, category, conducting_body, exam_frequency, exam_type, exam_date)
+VALUES ('RRB Exams', 'NTPC, ALP, Group D, JE', 'Railway Recruitment Board (RRB)', 'Annually or based on vacancies', 'Central', '2024-12-20');
+
+INSERT INTO exams (exam_name, category, conducting_body, exam_frequency, exam_type, exam_date)
+VALUES ('IBPS Exams', 'IBPS PO, IBPS Clerk, IBPS SO, RRB PO, RRB Clerk', 'Institute of Banking Personnel Selection (IBPS)', 'Annually', 'Central', '2024-10-10');
+
+INSERT INTO exams (exam_name, category, conducting_body, exam_frequency, exam_type, exam_date)
+VALUES ('RBI Exams', 'RBI Grade B, RBI Assistant', 'Reserve Bank of India (RBI)', 'Annually', 'Central', '2025-01-05');
+
+INSERT INTO exams (exam_name, category, conducting_body, exam_frequency, exam_type, exam_date)
+VALUES ('National Eligibility Test (NET)', 'Assistant Professor, JRF', 'UGC', 'Twice a year', 'Central', '2024-12-01');
+
+-- Tamil Nadu State Government Exams
+
+INSERT INTO exams (exam_name, category, conducting_body, exam_frequency, exam_type, exam_date)
+VALUES ('TNPSC Exams', 'Group I, Group II, Group IV, VAO', 'TNPSC', 'Annually or as required', 'State', '2025-03-20');
+
+INSERT INTO exams (exam_name, category, conducting_body, exam_frequency, exam_type, exam_date)
+VALUES ('TNUSRB Exams', 'Police Constable, Sub-Inspector', 'Tamil Nadu Uniformed Services Recruitment Board (TNUSRB)', 'Based on vacancies', 'State', '2024-11-25');
+
+INSERT INTO exams (exam_name, category, conducting_body, exam_frequency, exam_type, exam_date)
+VALUES ('TNTET', 'Paper I (Primary), Paper II (Upper Primary)', 'TRB Tamil Nadu', 'Annually or as required', 'State', '2025-02-15');
+
+INSERT INTO exams (exam_name, category, conducting_body, exam_frequency, exam_type, exam_date)
+VALUES ('TN MRB Exams', 'Nurses, Pharmacists, Lab Technicians', 'Tamil Nadu Medical Services Recruitment Board (TN MRB)', 'Based on vacancies', 'State', '2024-10-30');
+
+INSERT INTO exams (exam_name, category, conducting_body, exam_frequency, exam_type, exam_date)
+VALUES ('TNEB Exams', 'Assistant Engineer, Junior Assistant', 'Tamil Nadu Electricity Board (TNEB)', 'Based on vacancies', 'State', '2025-04-18');
+
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------''
+
+CREATE TABLE `exam_syllabus` (
+    `id` INT(11) AUTO_INCREMENT PRIMARY KEY,
+    `name_of_post` VARCHAR(255),
+    `department` VARCHAR(255),
+    `paper` VARCHAR(255),
+    `standard` VARCHAR(255),
+    `syllabus` VARCHAR(255)
+);
+
+INSERT INTO `exam_syllabus` (`name_of_post`, `department`, `paper`, `standard`, `syllabus`) VALUES
+('Combined Civil Services (Preliminary) Examination–I Group-I Services', 'All posts included in Group-I Services', 'General Studies', 'Degree', 'Departments concerned'),
+('Combined Civil Services (Main) Examination–I Group-I Services', 'All posts included in Group-I Services', 'Tamil Eligibility Test - Paper I', 'SSLC', 'Departments concerned'),
+('Combined Civil Services (Main) Examination–I Group-I Services', 'All posts included in Group-I Services', 'General Studies - Paper II', 'Degree', 'Departments concerned'),
+('Combined Civil Services (Main) Examination–I Group-I Services', 'All posts included in Group-I Services', 'General Studies - Paper III', 'Degree', 'Departments concerned'),
+('Combined Civil Services (Main) Examination–I Group-I Services', 'All posts included in Group-I Services', 'General Studies - Paper IV', 'Degree', 'Departments concerned'),
+('Combined Civil Services (Preliminary) Examination - Group I-B and I-C Services', 'Assistant Commissioner, Hindu Religious and Charitable Endowments', 'General Studies', 'Degree', 'Hindu Religious and Charitable Endowments'),
+('Combined Civil Services (Preliminary) Examination - Group I-B and I-C Services', 'District Educational Officer, School Education', 'General Studies', 'Degree', 'School Education'),
+('Combined Civil Services (Main) Examination - Group I-B Service', 'Assistant Commissioner, Hindu Religious and Charitable Endowments', 'Tamil Eligibility Test', 'SSLC', 'Hindu Religious and Charitable Endowments'),
+('Combined Civil Services (Main) Examination - Group I-B Service', 'Assistant Commissioner, Hindu Religious and Charitable Endowments', 'General Studies', 'Degree', 'Hindu Religious and Charitable Endowments'),
+('Combined Civil Services (Main) Examination - Group I-B Service', 'Assistant Commissioner, Hindu Religious and Charitable Endowments', 'Hindu Religion', 'Degree', 'Hindu Religious and Charitable Endowments'),
+('Combined Civil Services (Main) Examination - Group I-B Service', 'Assistant Commissioner, Hindu Religious and Charitable Endowments', 'Law', 'Degree', 'Hindu Religious and Charitable Endowments'),
+('Combined Civil Services (Main) Examination- Group-II Services', 'All posts included in Group-II Services', 'Tamil Eligibility Test', 'SSLC', 'Departments concerned'),
+('Combined Civil Services (Main) Examination- Group-II Services', 'All posts included in Group-II Services', 'General Studies', 'Degree', 'Departments concerned'),
+('Combined Civil Services Examination - IV (Group-IV Services)', 'All posts included in Group-IV Services', 'Tamil Eligibility-cum-Scoring Test', 'SSLC', 'Departments concerned'),
+('Combined Civil Services Examination - IV (Group-IV Services)', 'All posts included in Group-IV Services', 'General English (For Differently Abled Candidates only)', 'SSLC', 'Departments concerned'),
+('Combined Civil Services Examination - IV (Group-IV Services)', 'All posts included in Group-IV Services', 'General Studies', 'SSLC', 'Departments concerned');
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+INSERT INTO materials (exam_name, subject, download_link, exam_type) 
+VALUES 
+('TNPSC Group 1', 'General Studies',  'link_to_download_TNPSC1', 'State'),
+('TNPSC Group 2', 'General Studies', ' 'link_to_download_TNPSC2', 'State'),
+('TNPSC Group 4', 'General Tamil', 'link_to_download_TNPSC4_Tamil', 'State'),
+('TNPSC Group 4', 'General English',  'link_to_download_TNPSC4_English', 'State'),
+('TNPSC Group 1', 'Indian Polity', 'link_to_download_TNPSC1_Polity', 'State');
+
+
+------------
+
+
+INSERT INTO materials (exam_name, subject, material_link, download_link, exam_type) 
+VALUES 
+('UPSC Civil Services', 'General Studies', 'link_to_download_UPSC_GS', 'Central'),
+('UPSC Civil Services', 'History', 'link_to_download_UPSC_History', 'Central'),
+('SSC CGL', 'Quantitative Aptitude',  'link_to_download_SSC_CGL_QA', 'Central'),
+('SSC CGL', 'English',  'link_to_download_SSC_CGL_English', 'Central'),
+('IBPS PO', 'Reasoning', 'link_to_download_IBPS_Reasoning', 'Central');
+
+
+------------
+
+
+
+
+
+
+
+
+
+
